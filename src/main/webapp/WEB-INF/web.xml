@@ -27,7 +27,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>UpdateProject</servlet-name>
-        <url-pattern>/update</url-pattern>
+        <url-pattern>/update-project</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -37,6 +37,15 @@
     <servlet-mapping>
         <servlet-name>DeleteProject</servlet-name>
         <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DisplayProject</servlet-name>
+        <servlet-class>Servlets.DisplayProject</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DisplayProject</servlet-name>
+        <url-pattern>/display</url-pattern>
     </servlet-mapping>
 
 

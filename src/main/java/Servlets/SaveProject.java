@@ -14,7 +14,7 @@ import java.sql.Date;
 import java.sql.SQLException;
 
 
-@WebServlet("/SaveProject")
+@WebServlet("/projects")
 public class SaveProject extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -64,6 +64,7 @@ public class SaveProject extends HttpServlet {
 
         try {
             projectImp.save(project);
+            resp.sendRedirect("DisplayProject");
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
