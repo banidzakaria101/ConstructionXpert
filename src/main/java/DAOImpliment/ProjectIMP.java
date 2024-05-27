@@ -22,19 +22,11 @@ public class ProjectIMP implements ProjectDAO {
             stm.setInt(5, project.getProjectBudget());
             stm.executeUpdate();
 
-            // Log the parameters to verify they are not null
-            System.out.println("Project Name: " + project.getProjectName());
-            System.out.println("Project Description: " + project.getProjectDescription());
-            System.out.println("Project Start Date: " + project.getProjectStartDate());
-            System.out.println("Project End Date: " + project.getProjectEndDate());
-            System.out.println("Project Budget: " + project.getProjectBudget());
-
         }
     }
 
-    @Override
     public void update(Project project) throws SQLException, ClassNotFoundException {
-        String sql = "UPDATE project SET projectName=?, projectDescription=?, projectStartDate=?, projectEndDate=?, projectBudget=?";
+        String sql = "UPDATE project SET projectName=?, projectDescription=?, projectStartDate=?, projectEndDate=?, projectBudget=? WHERE projectId=?";
         try (Connection connection = dbConnection.getConnection();
              PreparedStatement stm = connection.prepareStatement(sql)) {
             stm.setString(1, project.getProjectName());
@@ -42,9 +34,11 @@ public class ProjectIMP implements ProjectDAO {
             stm.setDate(3, project.getProjectStartDate());
             stm.setDate(4, project.getProjectEndDate());
             stm.setInt(5, project.getProjectBudget());
+            stm.setInt(6, project.getProjectId());
             stm.executeUpdate();
         }
     }
+
 
     @Override
     public void delete(Project project) throws SQLException, ClassNotFoundException {
@@ -81,4 +75,6 @@ public class ProjectIMP implements ProjectDAO {
         }
         return projects;
     }
+
+
 }

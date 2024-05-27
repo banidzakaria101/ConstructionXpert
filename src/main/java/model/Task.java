@@ -11,6 +11,22 @@ public class Task {
     Date taskdStartDate;
     Date taskdEndDate;
 
+    public Task(String taskName, String taskDescription, String taskStatus, Date taskdStartDate, Date taskdEndDate) {
+        this.taskName = taskName;
+        this.taskDescription = taskDescription;
+        this.taskStatus = taskStatus;
+        this.taskdStartDate = taskdStartDate;
+        this.taskdEndDate = taskdEndDate;
+    }
+
+    public Task(String taskName, String taskDescription, String taskStatus, java.sql.Date taskStartDate, java.sql.Date taskEndDate) {
+    }
+
+    public Task() {
+
+    }
+
+
     public int getTaskId() {
         return taskId;
     }
@@ -43,16 +59,16 @@ public class Task {
         this.taskStatus = taskStatus;
     }
 
-    public Date getTaskdStartDate() {
-        return taskdStartDate;
+    public java.sql.Date getTaskdStartDate() {
+        return (java.sql.Date) taskdStartDate;
     }
 
     public void setTaskdStartDate(Date taskdStartDate) {
         this.taskdStartDate = taskdStartDate;
     }
 
-    public Date getTaskdEndDate() {
-        return taskdEndDate;
+    public java.sql.Date getTaskdEndDate() {
+        return (java.sql.Date) taskdEndDate;
     }
 
     public void setTaskdEndDate(Date taskdEndDate) {

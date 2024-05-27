@@ -16,6 +16,7 @@ import java.sql.SQLException;
 
 @WebServlet("/projects")
 public class SaveProject extends HttpServlet {
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ProjectIMP projectImp = new ProjectIMP();
@@ -48,6 +49,7 @@ public class SaveProject extends HttpServlet {
 //
 //    }
 //}
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ProjectIMP projectImp = new ProjectIMP();

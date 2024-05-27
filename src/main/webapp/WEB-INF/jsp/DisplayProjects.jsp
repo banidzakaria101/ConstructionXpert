@@ -36,9 +36,10 @@
                         <p class="card-text"><strong>End Date:</strong> ${project.projectEndDate}</p>
                         <p class="card-text"><strong>Budget:</strong> ${project.projectBudget}</p>
                         <div class="mt-3">
-                            <a href="view-project?projectId=${project.projectId}" class="btn btn-primary btn-sm">View Details</a>
+                            <a href="display-tasks?projectId=${project.projectId}" class="btn btn-primary btn-sm">View Details</a>
                             <a href="update-project?projectId=${project.projectId}" class="btn btn-warning btn-sm">Update</a>
                             <a href="delete-project?projectId=${project.projectId}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this project?');">Delete</a>
+                            <a href="add-tasks?projectId=${project.projectId}" class="btn btn-success btn-sm">Add Tasks</a>
                         </div>
                     </div>
                 </div>

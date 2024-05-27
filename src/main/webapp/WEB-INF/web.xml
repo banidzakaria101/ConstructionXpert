@@ -48,6 +48,24 @@
         <url-pattern>/display</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>AddTasks</servlet-name>
+        <servlet-class>Servlets.AddTasks</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddTasks</servlet-name>
+        <url-pattern>/add-tasks</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DisplayTasks</servlet-name>
+        <servlet-class>Servlets.DisplayTasks</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DisplayTasks</servlet-name>
+        <url-pattern>/display-tasks</url-pattern>
+    </servlet-mapping>
+
 
 
 

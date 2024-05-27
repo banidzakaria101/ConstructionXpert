@@ -24,7 +24,7 @@
 </nav>
 <div class="container mt-4">
     <h2>Update Project</h2>
-    <form action="update-project" method="post">
+    <form action="UpdateProject" method="post">
         <input type="hidden" name="projectId" value="${project.projectId}">
         <div class="form-group">
             <label for="projectName">Project Name</label>
