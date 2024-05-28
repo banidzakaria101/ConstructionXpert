@@ -33,6 +33,7 @@ public class UpdateProject extends HttpServlet {
         ProjectIMP projectImp = new ProjectIMP();
 
         try {
+            int projectId = Integer.parseInt(req.getParameter("projectId")); // Récupération de l'ID du projet
             String projectName = req.getParameter("projectName");
             String projectDescription = req.getParameter("projectDescription");
             Date projectStartDate = Date.valueOf(req.getParameter("projectStartDate"));
@@ -40,6 +41,7 @@ public class UpdateProject extends HttpServlet {
             Integer projectBudget = Integer.parseInt(req.getParameter("projectBudget"));
 
             Project project = new Project();
+            project.setProjectId(projectId); // Définir l'ID du projet
             project.setProjectName(projectName);
             project.setProjectDescription(projectDescription);
             project.setProjectStartDate(projectStartDate);

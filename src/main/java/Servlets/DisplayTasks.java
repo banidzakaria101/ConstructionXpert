@@ -19,7 +19,7 @@ public class DisplayTasks extends HttpServlet {
             int projectId = Integer.parseInt(request.getParameter("projectId"));
             TaskIMP taskImp = new TaskIMP();
 
-            List<Task> tasks = taskImp.getTasksByProjectId(projectId);
+            List<Task> tasks = taskImp.getAllTasks(projectId);
             request.setAttribute("tasks", tasks);
             request.setAttribute("projectId", projectId);
 

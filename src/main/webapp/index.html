@@ -11,19 +11,45 @@
             display: flex;
             min-height: 100vh;
             flex-direction: column;
+            background-image: url('https://img.freepik.com/free-photo/construction-workers-sunset_53876-138180.jpg?t=st=1716906486~exp=1716910086~hmac=68881484a36f7f635ca2f7f5679584a56711def749e4db39c468efb18a57bf25&w=996');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #ffffff;
         }
         main {
             flex: 1;
         }
         .footer {
-            background-color: #f1f1f1;
+            background-color: rgba(33, 37, 41, 0.8);
             padding: 10px 0;
             text-align: center;
+        }
+        .navbar {
+            background-color: rgba(33, 37, 41, 0.8);
+        }
+        .card {
+            background-color: rgba(33, 37, 41, 0.9);
+            color: #ffffff;
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff !important;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        h1, h2, p {
+            color: #ffffff;
         }
     </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark">
     <a class="navbar-brand" href="#">Project Management</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -34,7 +60,7 @@
                 <a class="nav-link" href="save-project">Add New Project</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="listProjects">List Projects</a>
+                <a class="nav-link" href="display">List Projects</a>
             </li>
         </ul>
     </div>
@@ -43,15 +69,23 @@
     <h1 class="text-center">Welcome to Project Management System</h1>
     <p class="text-center">Manage your projects efficiently and effectively.</p>
     <div class="row">
-        <div class="col-md-6">
-            <h2>Add a New Project</h2>
-            <p>Add a new project to your project list.</p>
-            <a class="btn btn-primary" href="save-project">Add Project</a>
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h2 class="card-title">Add a New Project</h2>
+                    <p class="card-text">Add a new project to your project list.</p>
+                    <a class="btn btn-primary" href="save-project">Add Project</a>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6">
-            <h2>View All Projects</h2>
-            <p>View and manage all your projects.</p>
-            <a class="btn btn-primary" href="display">View Projects</a>
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h2 class="card-title">View All Projects</h2>
+                    <p class="card-text">View and manage all your projects.</p>
+                    <a class="btn btn-primary" href="display">View Projects</a>
+                </div>
+            </div>
         </div>
     </div>
 </main>

@@ -5,16 +5,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task List</title>
+    <title>Project List</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://img.freepik.com/free-photo/image-engineering-objects-workplace-top-view-construction-concept-engineering-tools-vintage-tone-retro-filter-effect-soft-focus-selective-focus_1418-474.jpg?t=st=1716902346~exp=1716905946~hmac=93745313774a7019335d503160d725333e6a1a7adb892145725469a51f936e20&w=900');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8) !important;
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff !important;
+        }
+        .container {
+            margin-top: 30px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .card {
+            background-color: rgba(33, 37, 41, 0.9);
+            color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+        .card-title {
+            font-weight: bold;
+            color: #17a2b8;
+        }
+        .card-subtitle {
+            color: #6c757d;
+        }
+        .btn {
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+        }
+        .footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+            text-align: center;
+            color: #ffffff;
+        }
+    </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="../../index.html">Project Management</a>
-    <div class="collapse navbar-collapse">
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">Tasks Management</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="save-project">Add New Project</a>
+                <a class="nav-link" href="save-project">Add New Task</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="display">List Projects</a>
@@ -22,35 +80,40 @@
         </ul>
     </div>
 </nav>
-<div class="container mt-4">
-    <h2>Task List for Project: ${project.projectName}</h2>
-    <table class="table table-bordered">
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Status</th>
-            <th>Start Date</th>
-            <th>End Date</th>
-        </tr>
-        </thead>
-        <tbody>
+<div class="container">
+    <h2 class="text-center mb-4">Task List</h2>
+    <div class="row">
         <c:forEach var="task" items="${Tasks}">
-            <tr>
-                <td>${task.taskId}</td>
-                <td>${task.taskName}</td>
-                <td>${task.taskDescription}</td>
-                <td>${task.taskStatus}</td>
-                <td>${task.taskdStartDate}</td>
-                <td>${task.taskdEndDate}</td>
-            </tr>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        Task ID: ${task.taskId}
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">${task.taskName}</h5>
+                        <p class="card-text">${task.taskDescription}</p>
+                        <p class="card-text">Status: ${task.taskStatus}</p>
+                        <p class="card-text">Start Date: ${task.taskStartDate}</p>
+                        <p class="card-text">End Date: ${task.taskEndDate}</p>
+                        <div class="btn-group" role="group" aria-label="Actions">
+                            <a class="btn btn-info" href="view-task?taskId=${task.taskId}">
+                                <i class="fas fa-eye"></i> View
+                            </a>
+                            <a class="btn btn-warning" href="update-task?taskId=${task.taskId}">
+                                <i class="fas fa-edit"></i> Update
+                            </a>
+                            <a class="btn btn-danger" href="delete-task?taskId=${task.taskId}" onclick="return confirm('Are you sure you want to delete this task?');">
+                                <i class="fas fa-trash-alt"></i> Delete
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </c:forEach>
-        </tbody>
-    </table>
+    </div>
 </div>
-<footer class="footer mt-auto py-3 bg-light">
-    <div class="container">
+<footer class="footer">
+    <div>
         <p>&copy; 2024 Project Management System. All rights reserved.</p>
     </div>
 </footer>

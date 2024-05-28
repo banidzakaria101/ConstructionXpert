@@ -1,15 +1,66 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Project</title>
+    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://img.freepik.com/free-photo/pointing-sketch_1098-14323.jpg?t=st=1716906051~exp=1716909651~hmac=e850d3443de1091007420e2384a3c32d2367ac345b447f34a30ec63da9c721fd&w=900');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+        }
+        .navbar {
+            background-color: #343a40 !important;
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            color: #ffffff !important;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.75);
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 50px;
+            color: #ffffff;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-control {
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.7); /* Light semi-transparent background for input fields */
+            color: #000000; /* Input text color */
+        }
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+        }
+        .btn-primary {
+            border-radius: 5px;
+            background-color: #007bff;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #343a40;
+            color: #6c757d;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark">
     <a class="navbar-brand" href="../../index.html">Project Management</a>
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
@@ -23,7 +74,7 @@
     </div>
 </nav>
 <div class="container mt-4">
-    <h2>Update Project</h2>
+    <h2 class="text-center">Update Project</h2>
     <form action="UpdateProject" method="post">
         <input type="hidden" name="projectId" value="${project.projectId}">
         <div class="form-group">
@@ -49,7 +100,7 @@
         <button type="submit" class="btn btn-primary">Update Project</button>
     </form>
 </div>
-<footer class="footer mt-auto py-3 bg-light">
+<footer class="footer mt-auto">
     <div class="container">
         <p>&copy; 2024 Project Management System. All rights reserved.</p>
     </div>

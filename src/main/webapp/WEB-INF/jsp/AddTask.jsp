@@ -8,14 +8,17 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa;
+            background-image: url('https://img.freepik.com/free-photo/architecture-concept-with-notepad_23-2147813119.jpg?t=st=1716907907~exp=1716911507~hmac=f031536f5a7434e738369931563f57c059d04640f63ae78f5b6a37625b695809&w=900');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
         }
         .container {
             max-width: 600px;
-            background: #ffffff;
+            background: rgba(0, 0, 0, 0.7);
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
         .form-group label {
             font-weight: bold;
@@ -30,7 +33,7 @@
         }
         h2 {
             margin-bottom: 20px;
-            color: #333333;
+            color: #ffffff;
         }
     </style>
 </head>

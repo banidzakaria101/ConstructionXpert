@@ -32,7 +32,8 @@ public class AddTasks extends HttpServlet {
             Date taskStartDate = Date.valueOf(request.getParameter("taskStartDate"));
             Date taskEndDate = Date.valueOf(request.getParameter("taskEndDate"));
 
-            Task task = new Task(taskName, taskDescription, taskStatus, taskStartDate, taskEndDate);
+
+            Task task = new Task(taskProjectId, taskName, taskDescription, taskStatus, taskStartDate, taskEndDate);
 
             taskImp.addTask(task);
             response.sendRedirect("display?projectId=" + taskProjectId);

@@ -8,21 +8,38 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa;
+            background-image: url('https://img.freepik.com/free-photo/businessmen-hands-white-table-with-documents-drafts_176420-339.jpg?t=st=1716908443~exp=1716912043~hmac=d5eba84cdb5e741412f9724e71f0b4ea8cc12ce8d47d213bb4bdbd06914880f5&w=900');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
         }
         .form-container {
             max-width: 600px;
             margin: 50px auto;
             padding: 20px;
-            background-color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.7);
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
         .form-container h2 {
             margin-bottom: 20px;
+            color: #ffffff;
         }
         .form-group label {
             font-weight: bold;
+            color: #ffffff;
+        }
+        .form-control {
+            background-color: rgba(255, 255, 255, 0.7);
+            color: #000000;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
         }
     </style>
 </head>

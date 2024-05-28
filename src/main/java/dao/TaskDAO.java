@@ -8,5 +8,5 @@ public interface TaskDAO {
     void updateTask(Task task);
     void deleteTask(Task task);
     Task getTask(int id);
-    List<Task> getTasksByProjectId(int projectId);
+    List<Task> getAllTasks(int projectId);
 }

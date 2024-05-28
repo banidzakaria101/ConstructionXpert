@@ -52,8 +52,26 @@ public class ProjectIMP implements ProjectDAO {
 
     @Override
     public Project findById(int id) throws SQLException, ClassNotFoundException {
+        String sql = "SELECT * FROM project WHERE projectId = ?";
+        try (Connection connection = dbConnection.getConnection();
+             PreparedStatement stm = connection.prepareStatement(sql)) {
+            stm.setInt(1, id);
+            try (ResultSet rs = stm.executeQuery()) {
+                if (rs.next()) {
+                    Project project = new Project();
+                    project.setProjectId(rs.getInt("projectId"));
+                    project.setProjectName(rs.getString("projectName"));
+                    project.setProjectDescription(rs.getString("projectDescription"));
+                    project.setProjectStartDate(rs.getDate("projectStartDate"));
+                    project.setProjectEndDate(rs.getDate("projectEndDate"));
+                    project.setProjectBudget(rs.getInt("projectBudget"));
+                    return project;
+                }
+            }
+        }
         return null;
     }
+
 
     @Override
     public List<Project> findAll() throws SQLException, ClassNotFoundException {
