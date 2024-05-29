@@ -83,7 +83,7 @@
 <div class="container">
     <h2 class="text-center mb-4">Task List</h2>
     <div class="row">
-        <c:forEach var="task" items="${Tasks}">
+        <c:forEach var="task" items="${tasks}">
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">
@@ -93,10 +93,10 @@
                         <h5 class="card-title">${task.taskName}</h5>
                         <p class="card-text">${task.taskDescription}</p>
                         <p class="card-text">Status: ${task.taskStatus}</p>
-                        <p class="card-text">Start Date: ${task.taskStartDate}</p>
-                        <p class="card-text">End Date: ${task.taskEndDate}</p>
+                        <p class="card-text">Start Date: ${task.taskdStartDate}</p>
+                        <p class="card-text">End Date: ${task.taskdEndDate}</p>
                         <div class="btn-group" role="group" aria-label="Actions">
-                            <a class="btn btn-info" href="view-task?taskId=${task.taskId}">
+                            <a class="btn btn-info" href="view-resouces?taskId=${task.taskId}">
                                 <i class="fas fa-eye"></i> View
                             </a>
                             <a class="btn btn-warning" href="update-task?taskId=${task.taskId}">
@@ -110,6 +110,7 @@
                 </div>
             </div>
         </c:forEach>
+
     </div>
 </div>
 <footer class="footer">

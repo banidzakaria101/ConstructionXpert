@@ -8,7 +8,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-image: url('https://img.freepik.com/free-photo/architecture-concept-with-notepad_23-2147813119.jpg?t=st=1716907907~exp=1716911507~hmac=f031536f5a7434e738369931563f57c059d04640f63ae78f5b6a37625b695809&w=900');
+            background-image: url('https://img.freepik.com/free-photo/image-engineering-objects-workplace-top-view-construction-concept-engineering-tools-vintage-tone-retro-filter-effect-soft-focus-selective-focus_1418-474.jpg?t=st=1716902346~exp=1716905946~hmac=93745313774a7019335d503160d725333e6a1a7adb892145725469a51f936e20&w=900');
             background-size: cover;
             background-position: center;
             color: #ffffff;

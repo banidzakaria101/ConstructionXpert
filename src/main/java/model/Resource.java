@@ -2,10 +2,20 @@ package model;
 
 public class Resource {
     int resourceId;
+    int taskId;
     String resourceName;
     String resourceDescription;
     String resourceType;
-    Long resourceQuantity;
+    int resourceQuantity;
+
+
+    public Resource(int taskId, String resourceName, String resourceDescription, String resourceType,    int resourceQuantity) {
+        this.taskId = taskId;
+        this.resourceName = resourceName;
+        this.resourceDescription = resourceDescription;
+        this.resourceType = resourceType;
+        this.resourceQuantity = resourceQuantity;
+    }
 
     public int getResourceId() {
         return resourceId;
@@ -39,11 +49,22 @@ public class Resource {
         this.resourceType = resourceType;
     }
 
-    public Long getResourceQuantity() {
+    public int getResourceQuantity() {
         return resourceQuantity;
     }
 
-    public void setResourceQuantity(Long resourceQuantity) {
+    public void setResourceQuantity(int resourceQuantity) {
         this.resourceQuantity = resourceQuantity;
     }
+
+
+    public int getTaskId() {
+        return taskId;
+    }
+
+    public void setTaskId(int taskId) {
+        this.taskId = taskId;
+    }
+
+
 }

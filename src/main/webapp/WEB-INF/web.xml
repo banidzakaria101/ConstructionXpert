@@ -66,6 +66,24 @@
         <url-pattern>/display-tasks</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>DisplayResources</servlet-name>
+        <servlet-class>Servlets.DisplayResources</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DisplayResources</servlet-name>
+        <url-pattern>/display-resources</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddResources</servlet-name>
+        <servlet-class>Servlets.AddResources</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddResources</servlet-name>
+        <url-pattern>/add-resources-pattern</url-pattern>
+    </servlet-mapping>
+
 
 
 
